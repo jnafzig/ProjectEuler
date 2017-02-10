@@ -1,0 +1,9 @@
+triangle = importfile('triangle.dat');
+
+N = length(triangle);
+
+for i = 15:-1:1
+    for j = 1:i
+        
+    end
+end

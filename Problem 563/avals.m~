@@ -1,0 +1,20 @@
+function avals(L)
+    
+    if nargin == 1
+        i = 1;
+        plist = log(primes(25)');
+        ai = zeros(size(plist));
+    end
+    
+    aval = 0;
+    aexp = 0;
+    step = plist(i);
+    
+    while a<=L
+        ai(i) = aexp;
+        avals(L-aval,ai,i+1,plist);
+        aval = aval + step;
+        aexp = aexp + 1;
+    end
+end
+

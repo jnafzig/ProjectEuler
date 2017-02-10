@@ -1,0 +1,7 @@
+p = primes(100);
+p = [2^2*3];
+composite = prod(p);
+R = composite./(composite-1)*prod(p-1)/prod(p);
+R<15499/94744
+
+

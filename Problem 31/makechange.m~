@@ -1,0 +1,26 @@
+function [ pursetemp ] = makechange( purse, coins, cointotal)
+
+    pursetemp = purse;
+    k = find(purse~=0,1,'first')+1;
+    if k==1
+        done = false;
+        pursetemp(1) = 0
+    else
+        done = false;
+        pursetemp(k) = pursetemp(k)-1;
+        k = k - 1;
+    end
+    while ~ done
+        while pursetemp*coins < cointotal
+            pursetemp(k) = pursetemp(k) + 1;
+        end
+
+        if pursetemp*coins == cointotal
+            done = true;
+        else
+            pursetemp(k) = pursetemp(k) - 1;
+            k = k - 1;
+        end
+    end
+end
+

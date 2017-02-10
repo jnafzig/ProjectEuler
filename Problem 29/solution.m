@@ -1,0 +1,1 @@
+numel(unique(bsxfun(@power,(2:100)',2:100)))
